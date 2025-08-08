@@ -24,14 +24,14 @@ import { Toaster } from "react-hot-toast";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <ScrollToTop>
       <Provider store={store}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<Products />} />
           <Route path="/product/:id" element={<Product />} />
-          <Route path="/productcard" element={<ProductCardDemo />} />  {/* ← CAMBIAR ESTA LÍNEA */}
+          <Route path="/productcard" element={<ProductCardDemo />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/cart" element={<Cart />} />
