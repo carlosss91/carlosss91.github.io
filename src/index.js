@@ -18,6 +18,7 @@ import {
   Checkout,
   PageNotFound,
 } from "./pages";
+import { ProductCardDemo } from "./components";
 import ScrollToTop from "./components/ScrollToTop";
 import { Toaster } from "react-hot-toast";
 
@@ -30,6 +31,7 @@ root.render(
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<Products />} />
           <Route path="/product/:id" element={<Product />} />
+          <Route path="/productcard" element={<ProductCardDemo />} />  {/* ← CAMBIAR ESTA LÍNEA */}
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/cart" element={<Cart />} />
